@@ -94,3 +94,17 @@
     padding-left: 0;
   }
 }
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  text-align: center;
+  position: relative;
+}
+
+.image img{
+  max-width: 600px;
+}
