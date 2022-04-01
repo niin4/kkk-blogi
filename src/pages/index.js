@@ -10,9 +10,11 @@ class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const contentPages = get(this, 'props.data.allContentfulContentPage.nodes')
+    console.log(contentPages)
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} contentPages={contentPages}>
         <Hero
           image={author.heroImage.gatsbyImageData}
           title={'Iinar'}
@@ -65,6 +67,12 @@ export const pageQuery = graphql`
             width: 1180
           )
         }
+      }
+    }
+    allContentfulContentPage {
+      nodes {
+        title
+        slug
       }
     }
   }

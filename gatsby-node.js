@@ -15,6 +15,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
           }
         }
+        allContentfulContentPage {
+          nodes {
+            title
+            slug
+          }
+        }
       }
     `
   )
@@ -46,6 +52,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           slug: post.slug,
           previousPostSlug,
           nextPostSlug,
+        },
+      })
+    })
+  }
+
+  // Define a template for blog post
+  const contentPage = path.resolve('./src/templates/content-page.js')
+  const pages = result.data.allContentfulContentPage.nodes
+
+  // Create content pages
+  // `context` is available in the template as a prop and as a variable in GraphQL
+
+  if (pages.length > 0) {
+    pages.forEach((page, index) => {
+      createPage({
+        path: `/${page.slug}/`,
+        component: contentPage,
+        context: {
+          slug: page.slug,
         },
       })
     })
