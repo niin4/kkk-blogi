@@ -6,7 +6,7 @@ import * as styles from './footer.module.css'
 const Footer = () => (
   <Container as="footer">
     <div className={styles.container}>
-      &copy; 2022 Niina Riekki
+      &copy; 2022 Iinar
     </div>
   </Container>
 )
