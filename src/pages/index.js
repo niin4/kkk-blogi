@@ -11,14 +11,13 @@ class RootIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const contentPages = get(this, 'props.data.allContentfulContentPage.nodes')
-    console.log(contentPages)
 
     return (
       <Layout location={this.props.location} contentPages={contentPages}>
         <Hero
           image={author.heroImage.gatsbyImageData}
           title={'Iinar'}
-          content={'kahden kerroksen kohinaa'}
+          content={'some quirky cosplay'}
         />
         <ArticlePreview posts={posts} />
       </Layout>

@@ -10,7 +10,6 @@ import * as styles from './blog-post.module.css'
 class ContentPageTemplate extends React.Component {
   render() {
     const page = get(this.props, 'data.contentfulContentPage')
-console.log(page)
     return (
       <Layout location={this.props.location}>
         <Seo

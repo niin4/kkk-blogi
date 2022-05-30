@@ -17,7 +17,6 @@ const Navigation = () => (
   }
   `}
   render={data => {
-    console.log(data)
     return(
     <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
