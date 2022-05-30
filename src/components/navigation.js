@@ -27,7 +27,7 @@ const Navigation = () => (
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
         <Link to="/" activeClassName="active">
-          Etusivu
+          Home
         </Link>
       </li>
       <li className={styles.navigationItem}>
