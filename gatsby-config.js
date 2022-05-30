@@ -37,7 +37,9 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "iinar.net",
-    description: "Remonttidokumentaatiota ja vähän elämää siinä sivussa.",
+    siteUrl: `https://iinar.net`,
+    description: "Quirky cosplay blog",
+    image: "/summer.jpg"
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
