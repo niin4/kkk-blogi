@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
+import Seo from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} contentPages={contentPages}>
+        <Seo title="Iinar.net"/>
         <Hero
           image={author.heroImage.gatsbyImageData}
           title={'Iinar'}

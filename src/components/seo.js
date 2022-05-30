@@ -9,9 +9,9 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image, siteUrl }
         site {
           siteMetadata {
             title
-            siteUrl
             description
             image
+            siteUrl
           }
         }
       }
@@ -20,6 +20,8 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image, siteUrl }
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const defaultImage = image || site.siteMetadata?.image;
+  const defaultSiteUrl = siteUrl || site.siteMetadata?.siteUrl;
 
   return (
     <Helmet
@@ -35,10 +37,6 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image, siteUrl }
           content: metaDescription,
         },
         {
-          name: `image`,
-          content: `${siteUrl}${image}`,
-        },
-        {
           property: `og:title`,
           content: title,
         },
@@ -52,7 +50,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image, siteUrl }
         },
         {
           property: `og:image`,
-          content: `${siteUrl}${image}`,
+          content: `${defaultSiteUrl}${defaultImage}`,
         },
         {
           name: `twitter:card`,

@@ -37,9 +37,9 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "iinar.net",
-    siteUrl: `https://iinar.net`,
     description: "Quirky cosplay blog",
-    image: "/summer.jpg"
+    image: "/summer.jpg",
+    siteUrl: "https://iinar.net" 
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
