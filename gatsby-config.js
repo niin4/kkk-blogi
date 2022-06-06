@@ -36,10 +36,10 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "iinar.net",
+    title: "Niinkos",
     description: "Quirky cosplay blog",
     image: "/summer.jpg",
-    siteUrl: "https://iinar.net" 
+    siteUrl: "https://niinkos.netlify.app/" 
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [

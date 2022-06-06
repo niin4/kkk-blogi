@@ -15,10 +15,10 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} contentPages={contentPages}>
-        <Seo title="Iinar.net"/>
+        <Seo title="Niinkos"/>
         <Hero
           image={author.heroImage.gatsbyImageData}
-          title={'Iinar'}
+          title={'Niinkos'}
           content={'some quirky cosplay'}
         />
         <ArticlePreview posts={posts} />
